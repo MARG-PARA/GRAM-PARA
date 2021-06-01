@@ -1,7 +1,13 @@
+<div *ngIf = "showNavFoot;then home else admin"></div>
 
 
+<ng-template #admin>
+    <app-admin></app-admin>
+    <router-outlet></router-outlet>
+</ng-template>
 
+<ng-template #home>
 <app-navbar></app-navbar>
-<app-profile-page></app-profile-page>
+<router-outlet></router-outlet>
 <app-footbar></app-footbar>
-
+</ng-template>
